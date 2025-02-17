@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  background: url('images/central_park.jpg') center center no-repeat;
+  background-size: cover; /* Make the background image responsive */
+  height: 400px; /* give header some height to display the background image */
+  padding-top: 100px;
+  padding-left: 100px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation Bar Styles */
+nav {
+  background-color: rgb(255, 245, 238);
+  height: 50px;
+  text-align: center;
+  padding-top: 2px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  padding: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove Underline */
+  color: #000; /* Before Click */
+}
+
+nav ul li a:hover {
+  color: #333; /* Mouse Over */
+}
+
+nav ul li a:active {
+  color: #753a30; /* Mouse Down */
+}
+
+/* Main Area */
+main {
+  margin: 50px;
+}
+
+main h1 {
+  color: rgb(129, 141, 179);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Card Styles */
+.cards {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to new lines on smaller screens */
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  min-width: 280px; /* Minimum width for each card */
+  background-color: rgb(240, 240, 240);
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  max-width: 100%; /* Make the image responsive */
+  height: auto;
+}
+
+/* Footer Styles */
+footer {
+  height: 40px;
+  background-color: rgb(129, 141, 179);
+  text-align: center;
+  padding-top: 20px;
+  color: rgb(211, 218, 240);
+}
+
+/* Media Queries for Responsiveness */
+
+/* When the screen width is less than 600px (mobile devices) */
+@media screen and (max-width: 600px) {
+  header {
+      padding-left: 20px;
+      padding-top: 50px; /* Adjust padding to make text fit better */
+      font-size: 30px;
+  }
+
+  nav ul li {
+      display: block; /* Stack navigation items vertically */
+      padding: 10px 0;
+  }
+
+  .cards {
+      flex-direction: column; /* Stack cards vertically */
+  }
+
+  footer {
+      font-size: 14px; /* Make footer text smaller for mobile */
+  }
+}
+
+/* When the screen width is 600px or greater (tablet/desktop) */
+@media screen and (min-width: 600px) {
+  .cards {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .card {
+      flex: 1 1 calc(50% - 20px); /* Two columns layout with a gap between them */
+  }
+
+  header {
+      font-size: 60px; /* Larger font size for header */
+  }
+}
